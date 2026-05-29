@@ -14,6 +14,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     :root {
       --black: #0D0D0D;
       --white: #F5F0E8;
@@ -469,6 +473,37 @@ font-stretch: condensed;
       color: #8B0000;
     }
 
+    /* ── MOBILE ONLY ── */
+    @media (max-width: 767px) {
+      .wordmark {
+        display: none;
+      }
+
+      nav {
+        padding: 0.9rem 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        gap: 0;
+        justify-content: space-around;
+      }
+
+      .nav-links a {
+        flex: 1;
+        text-align: center;
+        font-family: 'Space Mono', monospace;
+        font-weight: 400;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        color: #F5F0E8;
+      }
+
+      .hero h1 span {
+        display: block;
+      }
+    }
+
     /* ── STUDIO LINK ── */
     .studio-link {
       position: fixed;
@@ -497,7 +532,7 @@ font-stretch: condensed;
     <img src="images/hero image 2.jpg" alt="Manchester Bar">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Bar Manchester</h1>
+      <h1><span>BAR</span><span>MANCH</span><span>ESTER</span></h1>
       <p>Music Bar. Gothic Quarter. — Every night from 6:30.</p>
     </div>
   </section>
@@ -563,6 +598,7 @@ font-stretch: condensed;
   </div>
 
   <section id="map">
+    <span id="contact"></span>
     <div class="map-header">
       <h2>Find Us</h2>
     </div>
